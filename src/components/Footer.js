@@ -1,23 +1,114 @@
-import React from "react";
-import {Box, Flex} from "@chakra-ui/react";
+import React from 'react';
+import logo2 from '../images/Logo2.png';
 
 const Footer = () => {
   return (
-    <Box backgroundColor="#18181b">
-      <footer>
-        <Flex
-          margin="0 auto"
-          px={12}
-          color="white"
-          justifyContent="center"
-          alignItems="center"
-          maxWidth="1024px"
-          height={16}
-        >
-          <p>Andre • © 2024</p>
-        </Flex>
-      </footer>
-    </Box>
+    <div className="Footer_Navigation">
+      <style>
+        {`
+          /* Footer Navigation */
+          .Footer_Navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #47674A;
+            color: #fff;
+            padding: 0 15%;
+            height: 476px;
+          }
+
+          .Footer_Navigation .footer-section {
+            margin-top: 5%;
+            flex: 1 1 200px; /* Adjust the basis as needed */
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .Footer_Navigation .footer-section h3 {
+            margin-bottom: 10px;
+          }
+
+          .Footer_Navigation .footer-section a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+          }
+
+          .Footer_Navigation .footer-section a:hover {
+            text-decoration: underline;
+          }
+
+          .Footer_Navigation .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .Footer_Navigation .logo img {
+            margin-top: 5%;
+            height: 15em;
+          }
+
+          /* Mobile Styles */
+          @media (max-width: 768px) {
+            .Footer_Navigation {
+              align-items: center;
+              height: 500px;
+            }
+
+            .footer-section{
+              padding-bottom:-1em;
+              padding-right:1em;
+            }
+
+            .Footer_Navigation .footer-section h3 {
+              font-size: 1em;
+            }
+
+            .Footer_Navigation .footer-section a {
+              font-size: 0.75em;
+
+            }
+
+            .Footer_Navigation .logo img {
+              height: 5em;
+            }
+          }
+        `}
+      </style>
+      <div className="footer-section">
+        <div className="logo"><img src={logo2} alt="Little Lemon Logo" /></div>
+      </div>
+      <div className="footer-section">
+        <h3>Doormat Navigation</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservations">Reservations</a>
+        <a href="#order">Order Online</a>
+        <a href="#login">Login</a>
+      </div>
+      <div className="footer-section">
+        <h3>Contact</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservations">Reservations</a>
+        <a href="#order">Order Online</a>
+        <a href="#login">Login</a>
+      </div>
+      <div className="footer-section">
+        <h3>Social Media Links</h3>
+        <a href="#facebook">Facebook</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#whatsapp">Whatsapp</a>
+      </div>
+    </div>
   );
 };
+
 export default Footer;
