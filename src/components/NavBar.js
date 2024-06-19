@@ -53,11 +53,12 @@ const NavBar = () => {
               position: relative; /* Asegura que los elementos hijos respeten el posicionamiento relativo */
               background-color: #f0f0f0; /* Fondo gris para dispositivos móviles */
               padding-bottom: 10px; /* Ajusta el padding para el rectángulo gris */
+              height: auto; /* Ajustar la altura para dispositivos móviles */
+              padding: 5px 10px; /* Reducir el padding en dispositivos móviles */
             }
 
-            .Nav_Bar .logo {
-              order: 1; /* Cambia el orden para colocar el logo primero */
-              margin-right: 10px; /* Espacio entre el logo y el botón */
+            .Nav_Bar .logo img {
+              height: 40px; /* Reducir el tamaño del logo en dispositivos móviles */
             }
 
             .Nav_Bar .menu_button {
@@ -65,9 +66,8 @@ const NavBar = () => {
               cursor: pointer;
               background: none;
               border: none;
-              padding: 10px;
               margin-left: 10px; /* Espacio entre el logo y el botón */
-              z-index: 1100; /* Asegura que el botón esté sobre el menú */
+              font-size: 1.5em; /* Ajustar el tamaño del botón */
             }
 
             .Nav_Bar .menu_panel {
@@ -94,6 +94,7 @@ const NavBar = () => {
               color: #000;
               display: block;
               padding: 5px 0;
+              font-size: 0.875em; /* Reducir el tamaño de la fuente en dispositivos móviles */
             }
           }
 

@@ -56,13 +56,24 @@ const Footer = () => {
           /* Mobile Styles */
           @media (max-width: 768px) {
             .Footer_Navigation {
+              flex-direction: row; /* Alinear en fila */
+              flex-wrap: nowrap;
+              justify-content: space-between;
               align-items: center;
-              height: 500px;
+              height: auto; /* Ajustar altura para móvil */
+              margin-left: auto;
+              margin-right: auto;
             }
 
-            .footer-section{
-              padding-bottom:-1em;
-              padding-right:1em;
+            .Footer_Navigation .logo {
+              display: none;
+              height: 0px;
+            }
+
+            .Footer_Navigation .footer-section {
+              flex: 1; /* Distribuir espacio equitativamente */
+              padding-right: 1em;
+              margin-top: 0;
             }
 
             .Footer_Navigation .footer-section h3 {
@@ -71,11 +82,6 @@ const Footer = () => {
 
             .Footer_Navigation .footer-section a {
               font-size: 0.75em;
-
-            }
-
-            .Footer_Navigation .logo img {
-              height: 5em;
             }
           }
         `}

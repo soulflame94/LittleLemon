@@ -67,23 +67,29 @@ const About = () => {
             }
 
             .about-images {
-              margin-top: 20px; 
+              margin-top: 20px;
             }
 
             .about-text h2 {
-              font-size: 2em; 
+              font-size: 2em;
             }
 
             .about-text .description {
-              font-size: 0.95em; 
+              font-size: 0.95em;
             }
-
 
             .about-images .image1,
             .about-images .image2 {
-              max-width: 100%; /* Imágenes ocupan el ancho completo en móvil */
-              margin-top: 10px; /* Espacio entre imágenes en móvil */
-              transform: none; /* Eliminar transformación en móvil */
+              max-width: 60%;
+              margin-top: 10px;
+              transform: none;
+              margin-left: auto;
+              margin-right: auto;
+            }
+
+            /* Ocultar la segunda imagen en dispositivos móviles */
+            .about-images .image2 {
+              display: none;
             }
           }
         `}
